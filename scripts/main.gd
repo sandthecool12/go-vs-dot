@@ -10,9 +10,9 @@ func _ready() -> void:
 	#score = 0
 	$Score_Display.text = "Score: " + str(score)
 	$Health_Display.text = str(health) + " :Health"
-
 const dot = preload("res://scenes/dot.tscn")
 const bad_dot = preload("res://scenes/bad_dot.tscn")
+var end_sound = load("res://assets/sounds/death_sound.mp3")
 
 
 func create_dot() -> void:
@@ -50,4 +50,6 @@ func update_health(damage: int) -> void:
 func _process(delta: float) -> void:
 	if health==0 and is_instance_valid($Player):
 		$Player.queue_free()
+		$Game_audio_player.stream = end_sound
+		$Game_audio_player.play()
 		
