@@ -1,12 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://cf3g10mbm18ya"]
+[gd_scene load_steps=5 format=3 uid="uid://cf3g10mbm18ya"]
 
 [ext_resource type="Script" uid="uid://c675rcooqyb8b" path="res://scripts/bad_dot.gd" id="1_20yq7"]
-[ext_resource type="Texture2D" uid="uid://ccx21nphlie3y" path="res://assets/icon.svg" id="2_qg6iy"]
+[ext_resource type="Texture2D" uid="uid://durqvn50xq23a" path="res://assets/graphics/BadDot.png" id="2_20yq7"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_swi4y"]
-
-[sub_resource type="CanvasTexture" id="CanvasTexture_pnrtl"]
-normal_texture = ExtResource("2_qg6iy")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ypqmy"]
 
@@ -18,8 +15,8 @@ script = ExtResource("1_20yq7")
 
 [node name="Bad_dotColor" type="Sprite2D" parent="."]
 modulate = Color(0.66528076, 0, 0.18548375, 1)
-scale = Vector2(20, 20)
-texture = SubResource("CanvasTexture_pnrtl")
+texture_filter = 1
+texture = ExtResource("2_20yq7")
 
 [node name="Bad_dot_collision" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_ypqmy")
