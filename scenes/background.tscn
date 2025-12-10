@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://f7q8635foo3k"]
+
+[ext_resource type="Texture2D" uid="uid://cpdpuwty1cr4d" path="res://assets/graphics/grass_bg.png" id="1_bkp1e"]
+
+[node name="Background" type="Sprite2D"]
+texture_filter = 1
+texture = ExtResource("1_bkp1e")
