@@ -48,7 +48,7 @@ func update_health(damage: int) -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if health==4 and is_instance_valid($Player):
+	if health==0 and is_instance_valid($Player):
 		$Player.queue_free()
 		$Game_audio_player.stream = end_sound
 		$Game_audio_player.play()
