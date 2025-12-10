@@ -29,3 +29,5 @@ offset_top = 7.0
 offset_right = 1136.0
 offset_bottom = 30.0
 text = ":Health"
+
+[node name="Game_audio_player" type="AudioStreamPlayer2D" parent="."]
