@@ -4,6 +4,9 @@ var speed = 400
 var screen_size = DisplayServer.window_get_size()
 var painful_sound
 
+var rng = RandomNumberGenerator.new()
+
+
 
 
 
@@ -16,7 +19,7 @@ func _ready() -> void:
 func play_hit_sound():
 	$Player_sounds.stream = painful_sound
 	$Player_sounds.play()
-	painful_sound = load("res://assets/sounds/hit_sound_2.mp3")
+	painful_sound = load("res://assets/sounds/hit_sound_"+str(rng.randi_range(1,4))+".mp3")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -51,7 +54,7 @@ func _on_body_entered(body: Node2D) -> void:
 		play_hit_sound()
 		body.queue_free()
 		get_parent().update_health(1)
-		rotation_degrees += 50
-		rotation_degrees -= 50
+		speed *=.9
+		
 		
 	
