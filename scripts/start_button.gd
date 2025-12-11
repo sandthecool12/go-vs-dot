@@ -12,7 +12,7 @@ func _process(delta: float) -> void:
 	
 
 
-
-func _on_pressed() -> void:
-	print($Main)
-	#$Main.visable = true
+#
+#func _on_pressed() -> void:
+	#print($Main)
+	##$Main.visable = true

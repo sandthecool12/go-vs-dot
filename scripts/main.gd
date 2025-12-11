@@ -52,6 +52,8 @@ func _process(delta: float) -> void:
 		$Game_audio_player.stream = end_sound
 		$Game_audio_player.play()
 		clear_dots()
-		
+
+
+
 		
 		

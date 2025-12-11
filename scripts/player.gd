@@ -75,6 +75,4 @@ func _on_body_entered(body: Node2D) -> void:
 
 func _on_player_sprite_animation_finished() -> void:
 	if $Player_sprite.animation == 'damage':
-		#print("animation_name")
-	#if animation_name == "damage":
 		is_playing_special_animation = false
